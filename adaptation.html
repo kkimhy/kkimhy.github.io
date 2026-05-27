@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+        ul{
+        list-style-type: none;
+        }
+        body{
+        font-family: "맑은 고딕", "돋움";
+        font-size: 100%;
+        }
+
+        [class*="c_"]{
+        float: left;
+        padding: 10px;
+        width: 100%;
+        }
+        @media only screen and (min-width: 600px){
+        .c_m_1 {width: 8.33%;} .c_m_2 {width: 16.66%;} .c_m_3 {width: 25%;}
+        .c_m_4 {width: 33.33%;} .c_m_5 {width: 41.66%;} .c_m_6 {width: 50%;}
+        .c_m_7 {width: 58.33%;} .c_m_8 {width: 66.66%;} .c_m_9 {width: 75%;}
+        .c_m_10 {width: 83.33%;} .c_m_11 {width: 91.66%;} .c_m_12 {width: 100%;}
+        }
+        @media only screen and (min-width: 768px){
+        .c_1 {width: 8.33%;} .c_2 {width: 16.66%;} .c_3 {width: 25%;}
+        .c_4 {width: 33.33%;} .c_5 {width: 41.66%;} .c_6 {width: 50%;}
+        .c_7 {width: 58.33%;} .c_8 {width: 66.66%;} .c_9 {width: 75%;}
+        .c_10 {width: 83.33%;} .c_11 {width: 91.66%;} .c_12 {width: 100%;}
+        }
+
+        header{
+        height: 80px;
+        padding: 20px;
+        background-color: #077aa4;
+        }
+        header a{
+        text-decoration: none;
+        color: white;
+        }
+
+        section#main{
+        padding: 15px;
+        }
+        section#main h1 {
+        margin-bottom: 15px;
+        }
+        section#main p{
+        padding: 8px 5px;
+        font-size: 0.95em;
+        line-height: 130%;
+        }
+        section#main p a, section#main p a:visited{
+        text-decoration: none;
+        color: black;
+        }
+        section#main p a:hover{
+        text-decoration: underline;
+        }
+        footer{
+        height: 60px;
+        padding: 10px;
+        clear: both;
+        text-align: center;
+        background-color: #eeeeee;
+        }
+
+        aside#menu li{
+        position: relative;
+        margin: 5px 0 0 0;
+        background-color: #02211a;
+        }
+        aside#menu a, aside#menu a:visited{
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #8af6eb;
+        }
+        aside#menu a:hover{
+        background-color: #054436;
+        }
+        
+        aside#menu .submenu {
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: #011410;
+        }
+        aside#menu .submenu li {
+        margin: 0;
+        border-bottom: 1px solid #054436;
+        }
+        aside#menu .submenu a {
+        padding-left: 25px;
+        }
+        aside#menu li:hover > .submenu {
+        display: block;
+        }
+
+        @media only screen and (min-width: 600px) {
+            aside#menu .submenu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 150px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            }
+            aside#menu .submenu a {
+            padding-left: 10px;
+            }
+        }
+
+        aside#photos img{
+        width: 100%;
+        }
+        aside#photos li{
+        margin: 5px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="c_12">
+        <a href="index.html"><h1>세계 영화 도감</h1></a>
+    </header>
+
+    <aside id="menu" class="c_m_3 c_3">
+        <ul>
+            <li>
+                <a href="genre.html">장르별 영화</a>
+                <ul class="submenu">
+                    <li><a href="adaptation.html">Adaptation</a></li>
+                    <li><a href="adventure.html">Adventure</a></li>
+                    <li><a href="supernatural.html">Supernatural</a></li>
+                    <li><a href="animation.html">Animation</a></li>
+                    <li><a href="romantic_comedy.html">Romantic Comedy</a></li>
+                </ul>
+            </li>
+            <li><a href="ranking.html">역대 흥행 순위</a></li>
+            <li>
+                <a href="year.html">연도별 명작</a>
+                <ul class="submenu">
+                    <li><a href="1980s.html">1980년대</a></li>
+                    <li><a href="1990s.html">1990년대</a></li>
+                    <li><a href="2000s.html">2000년대</a></li>
+                    <li><a href="2010s.html">2010년대</a></li>
+                    <li><a href="2020s.html">2020년대</a></li>
+                </ul>
+            </li>
+            <li><a href="theater.html">영화관 가이드</a></li>
+            <li><a href="film_festival.html">세계 영화제 일정</a></li>
+        </ul>
+    </aside>
+
+    <section id="main" class="c_m_9 c_6">
+        <h1>장르별 영화</h1>
+        <h3>Adaptation</h3>
+        <p>북미/캐나다 기준</p>
+        <ul>
+            <li>1위: Avengers: Endgame</li>
+            <li>2위: Spider-Man: No Way Home</li>
+            <li>3위: Black Panther</li>
+            <li>4위: Avengers: Infinity War</li>
+            <li>5위: The Avengers</li>
+        </ul>
+    </section>
+
+    <aside id="photos" class="c_m_12 c_3">
+        <h4>포스터</h4>
+        <ul>
+            <li><img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_FMjpg_UX1000_.jpg"></li>
+            <li><img src="https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"></li>
+            <li><img src="https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg"></li>
+            <li><img src="https://m.media-amazon.com/images/S/pv-target-images/3307ca0df325da35692128a6703a4bff5a5cf8c60bb719f221cadd6c03834358.jpg"></li>
+            <li><img src="https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._V1_.jpg"></li>
+        </ul>
+    </aside>
+
+    <footer class="c_12">
+        COPYRIGHT(C) 김현영 All Rights Reserved.
+    </footer>
+</body>
+</html>

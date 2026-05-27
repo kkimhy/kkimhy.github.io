@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세계 영화제 일정</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+        ul{
+        list-style-type: none;
+        }
+        body{
+        font-family: "맑은 고딕", "돋움";
+        font-size: 100%;
+        }
+
+        [class*="c_"]{
+        float: left;
+        padding: 10px;
+        width: 100%;
+        }
+        @media only screen and (min-width: 600px){
+        .c_m_1 {width: 8.33%;} .c_m_2 {width: 16.66%;} .c_m_3 {width: 25%;}
+        .c_m_4 {width: 33.33%;} .c_m_5 {width: 41.66%;} .c_m_6 {width: 50%;}
+        .c_m_7 {width: 58.33%;} .c_m_8 {width: 66.66%;} .c_m_9 {width: 75%;}
+        .c_m_10 {width: 83.33%;} .c_m_11 {width: 91.66%;} .c_m_12 {width: 100%;}
+        }
+        @media only screen and (min-width: 768px){
+        .c_1 {width: 8.33%;} .c_2 {width: 16.66%;} .c_3 {width: 25%;}
+        .c_4 {width: 33.33%;} .c_5 {width: 41.66%;} .c_6 {width: 50%;}
+        .c_7 {width: 58.33%;} .c_8 {width: 66.66%;} .c_9 {width: 75%;}
+        .c_10 {width: 83.33%;} .c_11 {width: 91.66%;} .c_12 {width: 100%;}
+        }
+
+        header{
+        height: 80px;
+        padding: 20px;
+        background-color: #077aa4;
+        }
+        header a{
+        text-decoration: none;
+        color: white;
+        }
+
+        section#main{
+        padding: 15px;
+        }
+        section#main h1 {
+        margin-bottom: 15px;
+        }
+        footer{
+        height: 60px;
+        padding: 10px;
+        clear: both;
+        text-align: center;
+        background-color: #eeeeee;
+        }
+
+        aside#menu li{
+        position: relative;
+        margin: 5px 0 0 0;
+        background-color: #02211a;
+        }
+        aside#menu a, aside#menu a:visited{
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #8af6eb;
+        }
+        aside#menu a:hover{
+        background-color: #054436;
+        }
+        
+        aside#menu .submenu {
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: #011410;
+        }
+        aside#menu .submenu li {
+        margin: 0;
+        border-bottom: 1px solid #054436;
+        }
+        aside#menu .submenu a {
+        padding-left: 25px;
+        }
+        aside#menu li:hover > .submenu {
+        display: block;
+        }
+
+        @media only screen and (min-width: 600px) {
+            aside#menu .submenu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 150px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            }
+            aside#menu .submenu a {
+            padding-left: 10px;
+            }
+        }
+
+        .calendar-title {
+        text-align: center;
+        font-size: 1.5em;
+        margin: 15px 0;
+        font-weight: bold;
+        }
+        .calendar-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        }
+        .calendar-table th, .calendar-table td {
+        border: 1px solid #dddddd;
+        padding: 8px;
+        vertical-align: top;
+        height: 110px;
+        }
+        .calendar-table th {
+        height: auto;
+        text-align: center;
+        background-color: #f9f9f9;
+        font-weight: bold;
+        }
+        .calendar-table th:first-child, .calendar-table td:first-child {
+        color: #c0392b;
+        }
+        .calendar-table th:last-child, .calendar-table td:last-child {
+        color: #2980b9;
+        }
+        .date-num {
+        display: block;
+        text-align: right;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333333;
+        }
+        .calendar-table td:first-child .date-num {
+        color: #c0392b;
+        }
+        .calendar-table td:last-child .date-num {
+        color: #2980b9;
+        }
+        .festival-item {
+        font-size: 0.8em;
+        margin-top: 4px;
+        line-height: 1.3;
+        color: #333333;
+        }
+    </style>
+</head>
+<body>
+    <header class="c_12">
+        <a href="index.html"><h1>세계 영화 도감</h1></a>
+    </header>
+
+    <aside id="menu" class="c_m_3 c_3">
+        <ul>
+            <li>
+                <a href="genre.html">장르별 영화</a>
+                <ul class="submenu">
+                    <li><a href="adaptation.html">Adaptation</a></li>
+                    <li><a href="adventure.html">Adventure</a></li>
+                    <li><a href="supernatural.html">Supernatural</a></li>
+                    <li><a href="animation.html">Animation</a></li>
+                    <li><a href="romantic_comedy.html">Romantic Comedy</a></li>
+                </ul>
+            </li>
+            <li><a href="ranking.html">역대 흥행 순위</a></li>
+            <li>
+                <a href="year.html">연도별 명작</a>
+                <ul class="submenu">
+                    <li><a href="1980s.html">1980년대</a></li>
+                    <li><a href="1990s.html">1990년대</a></li>
+                    <li><a href="2000s.html">2000년대</a></li>
+                    <li><a href="2010s.html">2010년대</a></li>
+                    <li><a href="2020s.html">2020년대</a></li>
+                </ul>
+            </li>
+            <li><a href="theater.html">영화관 가이드</a></li>
+            <li><a href="film_festival.html">세계 영화제 일정</a></li>
+        </ul>
+    </aside>
+
+    <section id="main" class="c_m_9 c_6">
+        <h1>세계 영화제 일정</h1>
+        
+        <div class="calendar-title">2026년 1월</div>
+        
+        <table class="calendar-table">
+            <thead>
+                <tr>
+                    <th>일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th>토</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="date-num">1</span></td>
+                    <td>
+                        <span class="date-num">2</span>
+                        <div class="festival-item">팜스프링스 (시작)</div>
+                    </td>
+                    <td><span class="date-num">3</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="date-num">4</span>
+                        <div class="festival-item">크리틱스 초이스 (시작/종료)</div>
+                    </td>
+                    <td><span class="date-num">5</span></td>
+                    <td><span class="date-num">6</span></td>
+                    <td><span class="date-num">7</span></td>
+                    <td><span class="date-num">8</span></td>
+                    <td><span class="date-num">9</span></td>
+                    <td>
+                        <span class="date-num">10</span>
+                        <div class="festival-item">녹스필름페스트 (시작)</div>
+                        <div class="festival-item">다카 국제영화제 (시작)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="date-num">11</span>
+                        <div class="festival-item">골든 글로브 (시작/종료)</div>
+                    </td>
+                    <td>
+                        <span class="date-num">12</span>
+                        <div class="festival-item" style="color: red;">팜스프링스 (종료)</div>
+                    </td>
+                    <td>
+                        <span class="date-num">13</span>
+                        <div class="festival-item">전미비평가협회상 (시작/종료)</div>
+                    </td>
+                    <td>
+                        <span class="date-num">14</span>
+                        <div class="festival-item">슈투트가르트 (시작)</div>
+                    </td>
+                    <td>
+                        <span class="date-num">15</span>
+                        <div class="festival-item">푸네 국제영화제 (시작)</div>
+                    </td>
+                    <td>
+                        <span class="date-num">16</span>
+                        <div class="festival-item">블랙무비 영화제 (시작)</div>
+                    </td>
+                    <td>
+                        <span class="date-num">17</span>
+                        <div class="festival-item" style="color: red;">녹스필름페스트 (종료)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="date-num">18</span>
+                        <div class="festival-item">트롬쇠 국제영화제 (시작)</div>
+                        <div class="festival-item" style="color: red;">다카 국제영화제 (종료)</div>
+                    </td>
+                    <td><span class="date-num">19</span></td>
+                    <td><span class="date-num">20</span></td>
+                    <td>
+                        <span class="date-num">21</span>
+                        <div class="festival-item" style="color: red;">슈투트가르트 (종료)</div>
+                    </td>
+                    <td>
+                        <span class="date-num">22</span>
+                        <div class="festival-item">선댄스 영화제 (시작)</div>
+                        <div class="festival-item" style="color: red;">푸네 영화제 (종료)</div>
+                    </td>
+                    <td>
+                        <span class="date-num">23</span>
+                        <div class="festival-item">예테보리 영화제 (시작)</div>
+                    </td>
+                    <td><span class="date-num">24</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="date-num">25</span>
+                        <div class="festival-item" style="color: red;">트롬쇠 영화제 (종료)</div>
+                        <div class="festival-item" style="color: red;">블랙무비 영화제 (종료)</div>
+                    </td>
+                    <td><span class="date-num">26</span></td>
+                    <td>
+                        <span class="date-num">27</span>
+                        <div class="festival-item">브줄 아시아영화제 (시작)</div>
+                        <div class="festival-item">제라르메 영화제 (시작)</div>
+                    </td>
+                    <td>
+                        <span class="date-num">28</span>
+                        <div class="festival-item">산토도밍고 (시작)</div>
+                    </td>
+                    <td>
+                        <span class="date-num">29</span>
+                        <div class="festival-item">로테르담 영화제 (시작)</div>
+                        <div class="festival-item">벵갈루루 영화제 (시작)</div>
+                    </td>
+                    <td>
+                        <span class="date-num">30</span>
+                        <div class="festival-item">끌레르몽페랑 (시작)</div>
+                    </td>
+                    <td>
+                        <span class="date-num">31</span>
+                        <div class="festival-item">노이다 영화제 (시작/종료)</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer class="c_12">
+        COPYRIGHT(C) 김현영 All Rights Reserved.
+    </footer>
+</body>
+</html>
