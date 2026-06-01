@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css.css">
+    <title>세계 영화 도감</title>
+    <style>
+        .content{
+        overflow: auto;
+        padding: 45px 55px;
+        }
+
+        .main{
+        float: left;
+        width: 65%;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 18px;
+        box-shadow: 0 4px 15px #999999;
+        }
+        .main h2{
+        margin-bottom: 18px;
+        font-size: 26px;
+        }
+        .main p{
+        line-height: 190%;
+        font-size: 16px;
+        }
+
+        .right{
+        float: right;
+        width: 30%;
+        background-color: #ffffff;
+        padding: 28px;
+        text-align: center;
+        border-radius: 18px;
+        box-shadow: 0 4px 15px #999999;
+        }
+        .right h2{
+        font-size: 26px;
+        margin-bottom: 10px;
+        }
+        .right img{
+        width: 100%;
+        max-width: 210px;
+        height: auto;
+        display: block;
+        margin: 18px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px #999999;
+        }
+
+        .movie_box h3{
+        margin-top: 16px;
+        font-size: 24px;
+        }
+
+        .movie_info{
+        font-size: 14px;
+        color: #777777;
+        margin: 8px 0 18px 0;
+        }
+
+        .story{
+        text-align: left;
+        line-height: 180%;
+        font-size: 15px;
+        color: #333333;
+        }
+
+        @media only screen and (max-width:620px){
+        .content{
+        padding: 15px;
+        }
+        .main{
+        float: none;
+        width: 100%;
+        padding: 22px;
+        }
+        .right{
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+        padding: 22px;
+        }
+        .right img{
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>세계 영화 도감</h1>
+    </header>
+
+    <aside id="menu">
+        <ul>
+            <li>
+                <a href="genre.html">장르별 영화</a>
+                <ul class="submenu">
+                    <li><a href="adventure.html">모험</a></li>
+                    <li><a href="animation.html">애니메이션</a></li>
+                    <li><a href="romantic_comedy.html">로맨틱 코미디</a></li>
+                    <li><a href="hero.html">히어로</a></li>
+                    <li><a href="crime.html">범죄</a></li>
+                </ul>
+            </li>
+            <li><a href="ranking.html">역대 흥행 순위</a></li>
+            <li>
+                <a href="year.html">연도별 명작</a>
+                <ul class="submenu">
+                    <li><a href="1980s.html">1980년대</a></li>
+                    <li><a href="1990s.html">1990년대</a></li>
+                    <li><a href="2000s.html">2000년대</a></li>
+                    <li><a href="2010s.html">2010년대</a></li>
+                    <li><a href="2020s.html">2020년대</a></li>
+                </ul>
+            </li>
+            <li><a href="theater.html">영화관 가이드</a></li>
+            <li><a href="film_festival.html">세계 영화제 일정</a></li>
+        </ul>
+    </aside>
+
+    <div class="content">
+        <div class="main">
+            <h2>영화란?</h2>
+            <p>
+                영화는 영화 작가가 체험한 실재를 시각과 청각 이미지의 창작적 구성을 통해 재현하는 예술 행위이다.
+                즉, 카메라 필름·조명·사운드 등 근대 과학 기술의 급진적 발달이 가져다 준 기계공학적 표현 도구를 이용하여,
+                영화작가가 그의 메시지를 대중에게 진술하는 종합적 예술 장르인 것이다.
+            </p>
+        </div>
+
+        <div class="right">
+            <h2>추천 영화</h2>
+
+            <div class="movie_box">
+                <img src="https://www.themoviedb.org/t/p/w1280/ygmHz3xbzqw4XqYMev2b6V087SZ.jpg" alt="해피엔드 포스터">
+
+                <h3>해피엔드</h3>
+                <p class="movie_info">2024 · 네오소라 감독 · 드라마</p>
+
+                <p class="story">
+                    점멸등이 일렁이는 근미래의 도쿄. 음악에 빠진 고등학생 유타와 코우는 친구들과 함께 자유로운 나날을 보낸다.
+                    어느 날 학교에 AI 감시 체제가 도입되면서, 그들을 둘러싼 일상은 조금씩 달라지기 시작한다.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy;copyright 스마트시티학과 202335224 김현영
+    </footer>
+</body>
+</html>
